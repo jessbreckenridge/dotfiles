@@ -3,3 +3,5 @@ function _update_ps1() {
   }
 
 PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
+
+export GIT_EDITOR=`which vim`
