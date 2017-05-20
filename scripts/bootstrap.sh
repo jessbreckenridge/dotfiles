@@ -13,12 +13,13 @@ ln -s -f ~/github/dotfiles/vim/my_configs.vim
 # Make tmux awesome...
 cd ~
 git clone git@github.com:gpakosz/.tmux.git ~/.tmux.git
-ln -s -f .tmux/.tmux.conf
+ln -s -f .tmux/.tmux.conf .
 ln -s -f ~/github/dotfiles/tmux/.tmux.conf.local
 
 # Sprinkle a little bash on it...
 git clone https://github.com/milkbikis/powerline-shell
-./powerline-shell/install.py
+cd ~/powerline-shell
+./install.py
+cd ~
 ln -s -f ~/powerline-shell/powerline-shell.py
-
 ln -s -f ~/github/dotfiles/bash/.bash_profile
