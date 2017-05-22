@@ -12,7 +12,7 @@ ln -s -f ~/github/dotfiles/vim/my_configs.vim
 
 # Make tmux awesome...
 cd ~
-git clone git@github.com:gpakosz/.tmux.git ~/.tmux.git
+git clone https://github.com/gpakosz/.tmux.git ~/.tmux.git
 ln -s -f .tmux.git/.tmux.conf .
 ln -s -f ~/github/dotfiles/tmux/.tmux.conf.local
 
