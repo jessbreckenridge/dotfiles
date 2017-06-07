@@ -10,6 +10,14 @@ fi
 cd ~/.vim_runtime
 ln -s -f ~/github/dotfiles/vim/my_configs.vim
 
+# Make vi more awesome...
+
+mkdir -p ~/.vim/autoload ~/.vim/bundle && \
+curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+
+# Puppet vim syntax highlighting.
+git clone -f git://github.com/rodjek/vim-puppet.git ~/.vim/bundle/puppet
+
 # Make tmux awesome...
 cd ~
 git clone https://github.com/gpakosz/.tmux.git ~/.tmux.git

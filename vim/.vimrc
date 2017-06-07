@@ -1,5 +1,9 @@
 set runtimepath+=~/.vim_runtime
 
+execute pathogen#infect()
+syntax on
+filetype plugin indent on
+
 source ~/.vim_runtime/vimrcs/basic.vim
 source ~/.vim_runtime/vimrcs/filetypes.vim
 source ~/.vim_runtime/vimrcs/plugins_config.vim
