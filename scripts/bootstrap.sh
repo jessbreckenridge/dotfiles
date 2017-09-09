@@ -1,33 +1,24 @@
 #!/bin/bash
 cd ~
-# Make vi awesome!
-if [ ! -d "~/.vim_runtime" ]; then
-  git clone https://github.com/amix/vimrc.git ~/.vim_runtime
-  sh ~/.vim_runtime/install_awesome_vimrc.sh
-else
-   cd ~/.vim_runtime; git pull --rebase
-fi
-cd ~/.vim_runtime
-ln -s -f ~/github/dotfiles/vim/my_configs.vim
+# VIM Awesome install, from git submodule: https://github.com/amix/vimrc.git
+sh ~/github/dotfiles/vimrc/install_awesome_vimrc.sh
+ln -s -f ~/github/dotfiles/vim/my_configs.vim ~/.vim_runtime
 
-# Make vi more awesome...
-
+# Pathogen. This doesn't have a clean submodule install, it's a package manager. So let's download untrusted shit and run it off the internet, because reasons.
 mkdir -p ~/.vim/autoload ~/.vim/bundle && \
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
-# Puppet vim syntax highlighting.
-git clone -f git://github.com/rodjek/vim-puppet.git ~/.vim/bundle/puppet
+ln -s -f ~/github/dotfiles/vim-puppet ~/.vim/bundle/puppet
 
 # Make tmux awesome...
-cd ~
-git clone https://github.com/gpakosz/.tmux.git ~/.tmux.git
-ln -s -f .tmux.git/.tmux.conf .
-ln -s -f ~/github/dotfiles/tmux/.tmux.conf.local
+ln -s -f ~/github/dotfiles/.tmux.git/.tmux.conf ~/.tmux.conf
+
+# This file is not in the submodule, this is where I store my overrides.
+ln -s -f ~/github/dotfiles/tmux/.tmux.conf.local ~/.tmux.conf.local
 
 # Sprinkle a little bash on it...
-git clone https://github.com/milkbikis/powerline-shell
 cd ~/powerline-shell
 ./install.py
 cd ~
-ln -s -f ~/powerline-shell/powerline-shell.py
-ln -s -f ~/github/dotfiles/bash/.bash_profile
+ln -s -f ~/powerline-shell/powerline-shell.py ~/powerline-shell.py
+ln -s -f ~/github/dotfiles/bash/.bash_profile ~.bash_profile

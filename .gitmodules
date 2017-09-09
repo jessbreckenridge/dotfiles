@@ -1,0 +1,12 @@
+[submodule "vimrc"]
+	path = vimrc
+	url = https://github.com/amix/vimrc.git
+[submodule "vim-puppet"]
+	path = vim-puppet
+	url = git://github.com/rodjek/vim-puppet.git
+[submodule ".tmux"]
+	path = .tmux
+	url = https://github.com/gpakosz/.tmux.git
+[submodule "powerline-shell"]
+	path = powerline-shell
+	url = https://github.com/milkbikis/powerline-shell
