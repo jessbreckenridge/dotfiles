@@ -1,0 +1,19 @@
+windows:
+  - name: puppet
+    root: ~/github/puppet
+    layout: even-horizontal
+    panes:
+      - clear
+      - clear
+  - name: terminals
+    root: ~/github
+    layout: even-horizontal
+    panes:
+      - clear
+      - clear
+  - name: dotfiles
+    root: ~/github/dotfiles
+    layout: even-horizontal
+    panes:
+      - clear
+      - clear

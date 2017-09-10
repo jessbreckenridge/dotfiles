@@ -11,14 +11,14 @@ curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 ln -s -f ~/github/dotfiles/vim-puppet ~/.vim/bundle/puppet
 
 # Make tmux awesome...
-ln -s -f ~/github/dotfiles/.tmux.git/.tmux.conf ~/.tmux.conf
-
+ln -s -f ~/github/dotfiles/.tmux/.tmux.conf ~/.tmux.conf
 # This file is not in the submodule, this is where I store my overrides.
 ln -s -f ~/github/dotfiles/tmux/.tmux.conf.local ~/.tmux.conf.local
-
+# Teamocil
+gem install teamocil
+ln -s -f ~/github/dotfiles/teamocil ~/.teamocil
 # Sprinkle a little bash on it...
 cd ~/powerline-shell
 ./install.py
-cd ~
 ln -s -f ~/powerline-shell/powerline-shell.py ~/powerline-shell.py
 ln -s -f ~/github/dotfiles/bash/.bash_profile ~.bash_profile
