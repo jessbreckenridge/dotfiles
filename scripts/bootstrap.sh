@@ -25,6 +25,10 @@ brew install python
 # Install powerline now that we have python
 pip2 install powerline-shell
 
+# Install legit, to make git friendlier
+pip2 install legit
+legit install
+
 # Install fonts, specifically inconsolata w/powerline.
 brew tap caskroom/fonts
 brew cask install font-inconsolata-for-powerline
