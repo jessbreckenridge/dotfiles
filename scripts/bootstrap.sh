@@ -55,7 +55,7 @@ cd ~/.vim_runtime
 ln -s -f ~/github/dotfiles/vim/my_configs.vim
 
 # Make tmux better...
-ln -s -f ~/github/dotfiles/.tmux/.tmux.conf ~/.tmux.conf
+ln -s -f ~/github/dotfiles/tmux-submodule/.tmux.conf ~/.tmux.conf
 
 # This file is not in the submodule, this is where I store my overrides.
 ln -s -f ~/github/dotfiles/tmux/.tmux.conf.local ~/.tmux.conf.local

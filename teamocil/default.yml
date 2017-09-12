@@ -17,3 +17,9 @@ windows:
     panes:
       - clear
       - clear
+  - name: notes
+    root: ~/github/notes
+    layout: even-horizontal
+    panes:
+      - clear
+      - clear
