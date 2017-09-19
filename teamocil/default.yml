@@ -23,3 +23,9 @@ windows:
     panes:
       - clear
       - clear
+  - name: worklog
+    root: ~/github/github-notes
+    layout: even-horizontal
+    panes:
+      - clear
+      - clear
