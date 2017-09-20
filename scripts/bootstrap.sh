@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Install comamnd line tools
+xcode-select --install
+
 # Make sure we have the latest submodules.
 cd ~/github/dotfiles
 git submodule update --init --recursive
@@ -9,6 +12,10 @@ cd ~
 
 # Install homebrew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+# Setup git global config
+git config --global user.name "Jess Breckenridge"
+git config --global user.email jessbreckenridge@github.com
 
 # Install cask
 brew tap caskroom/cask
@@ -36,9 +43,6 @@ brew cask install font-inconsolata-for-powerline
 # Install tmux
 brew install tmux
 
-# Install chrome
-brew cask install google-chrome
-
 # VIM Awesome install, from git submodule: https://github.com/amix/vimrc.git
 sh ~/github/dotfiles/vimrc/install_awesome_vimrc.sh
 ln -s -f ~/github/dotfiles/vim/my_configs.vim ~/.vim_runtime
@@ -65,7 +69,7 @@ ln -s -f ~/github/dotfiles/tmux-submodule/.tmux.conf ~/.tmux.conf
 ln -s -f ~/github/dotfiles/tmux/.tmux.conf.local ~/.tmux.conf.local
 
 # Teamocil
-gem install teamocil
+sudo gem install teamocil
 ln -s -f ~/github/dotfiles/teamocil ~/.teamocil
 
 # Sprinkle a little bash on it...
